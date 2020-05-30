@@ -39,6 +39,8 @@ function agregarTweet(e){
 
     //añadir al Local Storage
     agregarTweetLocalStorage(tweet);
+
+    document.getElementById('formulario').reset();
 }
 //Elimina el tweet del DOM
 function borrarTweet(e){
