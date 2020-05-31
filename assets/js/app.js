@@ -12,6 +12,8 @@ function eventListeners(){
 
     //contenido cargado
     document.addEventListener('DOMContentLoaded', localStorageListo);
+
+    document.querySelector('#eliminar').addEventListener('submit', eliminarTweets);
 }
 
 
@@ -113,4 +115,9 @@ function borrarTweetLocalStorage(tweet){
         }
     });
     localStorage.setItem('tweets', JSON.stringify(tweets));
+}
+
+function eliminarTweets(){
+    localStorage.clear();
+    window.location.reload(false);
 }
